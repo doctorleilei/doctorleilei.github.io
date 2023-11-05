@@ -24,16 +24,7 @@
             display: none;
         }
 
-        #sequence-button,
-        #random-button,
-        #mark-button,
-        #unmark-button,
-        #all-button,
-        #marked-button,
-        #try-again-button,
-        #prev-button,
-        #next-button,
-        #check-button {
+        button {
             font-size: 16px;
             padding: 10px 20px;
             background-color: #007bff;
@@ -47,7 +38,18 @@
     <div id='onload'>
         <br>
         <br>
-        <button id="sequence-button" onclick="showSequentialQuestions()">Sequential Questions</button>
+        <button id="sequence-button" onclick="showSequentialQuestions()">Sequential Questions All</button>
+        <br>
+        <button id="sequence-button" onclick="showSequentialQuestionsFrom1()">Sequential Questions 1~20</button>
+        <br>
+        <button id="sequence-button" onclick="showSequentialQuestionsFrom21()">Sequential Questions 21~40</button>
+        <br>
+        <button id="sequence-button" onclick="showSequentialQuestionsFrom41()">Sequential Questions 41~60</button>
+        <br>
+        <button id="sequence-button" onclick="showSequentialQuestionsFrom61()">Sequential Questions 61~80</button>
+        <br>
+        <button id="sequence-button" onclick="showSequentialQuestionsFrom81()">Sequential Questions 81~</button>
+        <br>
         <button id="random-button" onclick="showRandomQuestions()">Random Questions</button>
     </div>
     <div id="question-container" style="display: none;">
@@ -1388,6 +1390,66 @@
         function showSequentialQuestions() {
             document.getElementById("onload").style.display = "none";
             allQuestions = originalQuestions.slice();
+            questions = allQuestions;
+            updateQuestionDisplay();
+            document.getElementById("question-container").style.display = "block";
+            document.getElementById("all-button").style.display = "none";
+            document.getElementById("marked-button").style.display = "inline";
+            document.getElementById("mark-button").style.display = "inline";
+            document.getElementById("unmark-button").style.display = "none";
+        }
+
+        function showSequentialQuestionsFrom1() {
+            document.getElementById("onload").style.display = "none";
+            allQuestions = originalQuestions.slice(0, 20);
+            questions = allQuestions;
+            updateQuestionDisplay();
+            document.getElementById("question-container").style.display = "block";
+            document.getElementById("all-button").style.display = "none";
+            document.getElementById("marked-button").style.display = "inline";
+            document.getElementById("mark-button").style.display = "inline";
+            document.getElementById("unmark-button").style.display = "none";
+        }
+
+        function showSequentialQuestionsFrom21() {
+            document.getElementById("onload").style.display = "none";
+            allQuestions = originalQuestions.slice(20, 40);
+            questions = allQuestions;
+            updateQuestionDisplay();
+            document.getElementById("question-container").style.display = "block";
+            document.getElementById("all-button").style.display = "none";
+            document.getElementById("marked-button").style.display = "inline";
+            document.getElementById("mark-button").style.display = "inline";
+            document.getElementById("unmark-button").style.display = "none";
+        }
+
+        function showSequentialQuestionsFrom41() {
+            document.getElementById("onload").style.display = "none";
+            allQuestions = originalQuestions.slice(40, 60);
+            questions = allQuestions;
+            updateQuestionDisplay();
+            document.getElementById("question-container").style.display = "block";
+            document.getElementById("all-button").style.display = "none";
+            document.getElementById("marked-button").style.display = "inline";
+            document.getElementById("mark-button").style.display = "inline";
+            document.getElementById("unmark-button").style.display = "none";
+        }
+
+        function showSequentialQuestionsFrom61() {
+            document.getElementById("onload").style.display = "none";
+            allQuestions = originalQuestions.slice(60, 80);
+            questions = allQuestions;
+            updateQuestionDisplay();
+            document.getElementById("question-container").style.display = "block";
+            document.getElementById("all-button").style.display = "none";
+            document.getElementById("marked-button").style.display = "inline";
+            document.getElementById("mark-button").style.display = "inline";
+            document.getElementById("unmark-button").style.display = "none";
+        }
+
+        function showSequentialQuestionsFrom81() {
+            document.getElementById("onload").style.display = "none";
+            allQuestions = originalQuestions.slice(80);
             questions = allQuestions;
             updateQuestionDisplay();
             document.getElementById("question-container").style.display = "block";
