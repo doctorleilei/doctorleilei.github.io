@@ -65,6 +65,7 @@
         <br>
         <button id="check-button" onclick="checkAnswer()">Check Answer</button>
         <br>
+        <div id="title"></div>
         <div id="result"></div>
         <div id="answers"></div>
         <br>
@@ -78,8 +79,9 @@
         var markedQuestions = [];
         var originalQuestions = [
             {
-                question: [
+                title:
                     `NO.1/82`,
+                question: [
                     `What can you set up in the copying control tool for billing documents? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -91,8 +93,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.2/82`,
+                question: [
                     `When you create billing documents, you want to ensure that their texts are sourced from the outbound delivery, not from the sales order. `,
                     `Where do you configure this?`,
                 ],
@@ -104,8 +107,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.3/82`,
+                question: [
                     `What are some features of the Sales Order Fulfillment lssues app? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -117,8 +121,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.4/82 `,
+                question: [
                     `Which fields are used in the determination of the shipping point? 出荷ポイント`,
                     `Note: There are 3 correct answers to this question.`,
                 ],
@@ -131,8 +136,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.5/82`,
+                question: [
                     `You sell a product for which there is a bill of material.`,
                     `What must you set to ensure that the components automatically appear as sub-items in the order?`,
                 ],
@@ -144,8 +150,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.6/82`,
+                question: [
                     `What are some of the prerequisites for creation of a credit memo based on a credit memo request? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -157,8 +164,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.7/82 `,
+                question: [
                     `Which field from the material master is used in route determination?`,
                 ],
                 options: [
@@ -169,8 +177,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.8/82`,
+                question: [
                     `Which channels are supported by BRF+ Output Management? `,
                     `Note: There are 3 correct answers to this question`,
                 ],
@@ -183,8 +192,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.9/82`,
+                question: [
                     `Which controls can you set when you configure a schedule line category? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -196,8 +206,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.10/82`,
+                question: [
                     `Your outbound deliveries must automatically determine storage locations. Where do you activate this?`,
                 ],
                 options: [
@@ -208,8 +219,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.11/82`,
+                question: [
                     `How is the link between SAP S/4HANA Sales and SAP S/4HANA Finance set up?`,
                 ],
                 options: [
@@ -220,8 +232,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.12/82`,
+                question: [
                     `You want to automatically supply your customers with another material if the ordered material is not available.`,
                     `How would you do this?`,
                 ],
@@ -233,8 +246,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.13/82`,
+                question: [
                     `You investigate the standard behavior of the two sales document types Delivery Free of Charge (FD) and Subsequent Delivery Free of Charge (SD). `,
                     `What do you find out? `,
                     `Note: There are 2 correct answers to this question.`,
@@ -247,8 +261,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.14/82`,
+                question: [
                     `You need to change standard sales processing logic and your requirement cannot be met in Customizing.  `,
                     `What oplions will ensure there are no changes to SAP-delivered obiects? Nole: There are 3 correct answers to this question.`,
                 ],
@@ -261,8 +276,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.15/82`,
+                question: [
                     `What could be the origin of a partner in a sales order? `,
                     `Note: There are 2 correct answers to this question`,
                 ],
@@ -274,8 +290,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.16/82`,
+                question: [
                     `Which technology is used to support SAP S/4HANA Embedded Analytics?`,
                 ],
                 options: [
@@ -286,8 +303,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.17/82`,
+                question: [
                     `Texts are copied from a sold-to-party to a sales order. Any later change to the sold-to-party texts should not be visible in this order. `,
                     `Which object controls this behawior?`,
                 ],
@@ -299,8 +317,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.18/82 `,
+                question: [
                     `Which of the following settings are required to be able to deliver a product? `,
                     `Note: There are 2 correct answers to this question`,
                 ],
@@ -312,8 +331,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.19/82`,
+                question: [
                     `Where do you configure the defaut Billing type to be used for order-related or delivery-related Billing?`,
                 ],
                 options: [
@@ -324,8 +344,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.20/82`,
+                question: [
                     `You maintain a sales order with several items and apply a freight charge. `,
                     `The system should automatically distribute the freight charge among the ltems based on the net value. What do you need to do?`,
                 ],
@@ -337,8 +358,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.21/82`,
+                question: [
                     `You are using incompleteness procedures in your system, To which elements can they be assigned? `,
                     `Note:There are 3 corect answers to this question.`,
                 ],
@@ -351,8 +373,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.22/82`,
+                question: [
                     `What are characteristics of decision table processing, as used in BRF+ based output management?`,
                 ],
                 options: [
@@ -363,8 +386,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.23/82`,
+                question: [
                     `How can you reduce the maintenance effort for customer master data?`,
                 ],
                 options: [
@@ -375,8 +399,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.24/82`,
+                question: [
                     `You can settle a condition contract using which of the following settlement types? `,
                     `Note: There are 3 correct answers to this question.`,
                 ],
@@ -389,8 +414,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.25/82`,
+                question: [
                     `You want to configure that only complete sales documents can be saved. How can you achieve this?`,
                 ],
                 options: [
@@ -401,8 +427,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.26/82`,
+                question: [
                     `What are some characteristics of SAP Smart Business? `,
                     `Note: There are 3 correct answers to this question`,
                 ],
@@ -415,8 +442,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.27/82`,
+                question: [
                     `You save a sales order and receive a system message that a business partner of a specific partner function is missing. `,
                     `Which of the following partner functions can cause this problem? `,
                     `Note: There are 2 correct answers to this queston.`,
@@ -429,8 +457,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.28/82`,
+                question: [
                     `To what do you assign a material listing procedure?`,
                 ],
                 options: [
@@ -441,8 +470,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.29/82`,
+                question: [
                     `You want to use condition exclusion. For which of the following pricing elements can you set the condition exclusion indicator? `,
                     `Note There are 2 correct answvers to this question.`,
                 ],
@@ -454,9 +484,11 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.30/82`,
-                    `What are characieristics of Core Data Services (CDS) views? Nole: There are 2 correct answers to this ouestion`,
+                question: [
+                    `What are characieristics of Core Data Services (CDS) views? `,
+                    `Nole: There are 2 correct answers to this ouestion`,
                 ],
                 options: [
                     `CDS views speed up reporting by providing a dedicated persistency layer○`,
@@ -466,8 +498,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.31/82`,
+                question: [
                     `You are configuring the organizational structure in your system. Which assignments are possible? `,
                     `Note: There are 3 correct answers to this question.`,
                 ],
@@ -480,9 +513,11 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.32/82`,
-                    `Where can you control whether or not to perform a matertal availabilty check? Nole: There are 3 correct answers to this question.`,
+                question: [
+                    `Where can you control whether or not to perform a matertal availabilty check? `,
+                    `Nole: There are 3 correct answers to this question.`,
                 ],
                 options: [
                     `In the material master record○`,
@@ -493,8 +528,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.33/82`,
+                question: [
                     `When performing backorder processing. which confirmation strategies can you select? `,
                     `Note: There are 3 correct answers to this question.`,
                 ],
@@ -507,8 +543,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.34/82 `,
+                question: [
                     `How does the rush order process differ from the standard order process?`,
                 ],
                 options: [
@@ -519,8 +556,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.35/82`,
+                question: [
                     `When creating a business partner, allocation of the business partner number is controlled by a number range assigned to which object?`,
                 ],
                 options: [
@@ -531,8 +569,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.36/82`,
+                question: [
                     `During the material availabilty check for a sales order item, `,
                     `the ordered quantity is completely confirmed on the required date even though there is only a partial quantity in stock. `,
                     `Which setting could lead to this behavior?`,
@@ -545,8 +584,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.37/82`,
+                question: [
                     `When creating a sales order with reference to a quotation, a header text must be automatically copied from the sold-to-party if it cannot be found in the quotation. `,
                     `if copied for the sold-to party, it must be in the sold-to party language.  What must you do? `,
                     `Note: There are 3 correct answers to this question.`,
@@ -560,8 +600,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.38/82 `,
+                question: [
                     `What can you configure in a billing type? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -573,8 +614,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.39/82`,
+                question: [
                     `How does the system determine the warehouse number in an order-to cash process?`,
                 ],
                 options: [
@@ -586,8 +628,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.40/82`,
+                question: [
                     `in which type of outline agreerment would you see details of confirmed material quantities and delivery dates?`,
                 ],
                 options: [
@@ -598,8 +641,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.41/82`,
+                question: [
                     `Which fields are used to determine the delivery item category? `,
                     `Note: There are 3 correct answers to this question,`,
                 ],
@@ -612,8 +656,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.42/82 `,
+                question: [
                     `You want to set up automatic pricing in a sales order. Which actions should you take to achieve this? `,
                     `Note:There are 2 correct answers to this questlon.`,
                 ],
@@ -625,8 +670,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.43/82`,
+                question: [
                     `Which information comes from the payer? `,
                     `Note: There are 2 correct answers to this question`,
                 ],
@@ -638,8 +684,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.44/82`,
+                question: [
                     `Which documents can only be created with reference to a billing document? `,
                     `Note: There are 2 correct answers to thrs question.`,
                 ],
@@ -651,8 +698,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.45/82 `,
+                question: [
                     `You want to use Billing as part of the sales process. Which organizational units must be configured? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -664,8 +712,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.46/82`,
+                question: [
                     `SAP S/4HANA combines Online Transaction Processing (OLTP) and Online Analytical Processing (OLAP) on a singleplatform. `,
                     `What are direct results of this? `,
                     `Note. There are 2 correct answers to this question.`,
@@ -678,8 +727,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.47/82`,
+                question: [
                     `For which type of outline agreement do you determine the material from the item category?`,
                 ],
                 options: [
@@ -690,8 +740,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.48/82`,
+                question: [
                     `You already have a condition record for a matertal price that is valid for the whole year. `,
                     `Now you have to set up a special sales price for this material for the next two weeks. How do you do this? `,
                     `Note: There are 2 corect answers tothis question.`,
@@ -704,8 +755,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.49/82`,
+                question: [
                     `When BRF+ Output Management successfully issues an outout, where is the rendered PoF document stored?`,
                 ],
                 options: [
@@ -716,8 +768,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.50/82`,
+                question: [
                     `You want to process and monitor outbound deliveries. Which organizational unit supports this?`,
                 ],
                 options: [
@@ -728,8 +781,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.51/82`,
+                question: [
                     `You want to be able to enter a special price in a sales order for a certain customer that should ignore all applicable discounts. How can you achieve this?`,
                 ],
                 options: [
@@ -740,8 +794,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.52/82`,
+                question: [
                     `How do you limit the choice of order reasons for a sales documment?`,
                 ],
                 options: [
@@ -752,8 +807,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.53/82`,
+                question: [
                     `What are the effects of posting the goods issue during a sales process? `,
                     `Note: There are 3 correct answers to this question.`,
                 ],
@@ -766,8 +822,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.54/82`,
+                question: [
                     `What is a characteristic of a service item in a sales order?`,
                 ],
                 options: [
@@ -778,8 +835,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.55/82`,
+                question: [
                     `What is a prerequisite for billing?`,
                 ],
                 options: [
@@ -790,8 +848,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.56/82`,
+                question: [
                     `Which elements are assigned to field reference groups to influence the status of fields in the material master?`,
                     `Note: There are 2 coect answers to this question`,
                 ],
@@ -803,8 +862,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.57/82`,
+                question: [
                     `When you create a sales order with reference to a quotation, you want to ensure the entire quotation is always included in the order. Where do you make this setting?`,
                 ],
                 options: [
@@ -815,8 +875,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.58/82`,
+                question: [
                     `In a free goods(無償品) scenario, which elements influence how the item category is determined for the free goods item? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -828,8 +889,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.59/82`,
+                question: [
                     `You are analyzing an order that shows the same material twice: once in the main item and once in the sub-tem. `,
                     `What function can cause this behavior? `,
                     `Note: There are 2 correct answers to this question.`,
@@ -842,8 +904,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.60/82`,
+                question: [
                     `Your company uses various strategies to supply your customers with goods and/or services. `,
                     `Which organizational structure element can be used to model these strategies?`,
                 ],
@@ -855,8 +918,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.61/82`,
+                question: [
                     `You normally include multiple sales orders in your outbound deliverles Which sales order fields would prevent this from happening if their content was different?`,
                     `Note: There are 3 correct answers to this question.`,
                 ],
@@ -869,8 +933,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.62/82`,
+                question: [
                     `What is a use case for a billing plan type? 請求計画`,
                 ],
                 options: [
@@ -881,8 +946,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.63/82`,
+                question: [
                     `in the outbound delivery document, which information can be found in the item only?`,
                 ],
                 options: [
@@ -893,8 +959,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.64/82`,
+                question: [
                     `The delivering plant should be determined automatically for a sales order item. Which master data sources can be used to achieve this? `,
                     `Note: There are 3 correct answers to this question.`,
                 ],
@@ -907,8 +974,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.65/82 `,
+                question: [
                     `You want to set up a discount with a scale value (condition type k029) that is based on the matertal group"spare parts".`,
                     `The discount should be granted for all items in a sales order that are spare parts. What do you need to set up for the condition type K029 so it meets this requirement?`,
                 ],
@@ -920,8 +988,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.66/82`,
+                question: [
                     `What are characteristics of an invoice list process? `,
                     `Note: There are 2 correct answers to thts question`,
                 ],
@@ -933,8 +1002,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.67/82`,
+                question: [
                     `In the cash sales process, the output representing the customer invoice is produced from which document type?`,
                 ],
                 options: [
@@ -945,8 +1015,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.68/82`,
+                question: [
                     `Which decisions do you have to make when configuring a new delivery item category? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -958,8 +1029,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.69/82`,
+                question: [
                     `You want to create a new customer for use in sales processes. For which organizational levels do you need tomaintain the data?`,
                 ],
                 options: [
@@ -970,8 +1042,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.70/82`,
+                question: [
                     `How can you manage which materials can be released for a value contract? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -983,8 +1056,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.71/82`,
+                question: [
                     `Which time components are used to calculate the confirmed delivery date in a sales order? `,
                     `Note: There are 2 correct answvers lo this question`,
                 ],
@@ -996,8 +1070,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.72/82`,
+                question: [
                     `You want to set up a condition type so that it can only be entered manually in a sales order. What options do you have to achieve this? `,
                     `Nole. There are 3 corredt answers to this question.`,
                 ],
@@ -1010,8 +1085,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.73/82`,
+                question: [
                     `To which elements do you assign a partner determination procedure? `,
                     `Note: There are 2 correct answers to thisquestion`,
                 ],
@@ -1023,8 +1099,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.74/82`,
+                question: [
                     `When you create a sales order with reference to a quotation, you want to ensure the entire quotation is always included in the order. Where do you make this setting?`,
                 ],
                 options: [
@@ -1035,8 +1112,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.75/82`,
+                question: [
                     `How do you configure the down-payment process? Nole: There are 2 correct answers to this question.`,
                 ],
                 options: [
@@ -1047,8 +1125,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.76/82`,
+                question: [
                     `What are differences between the transaction Create Billing Documents (VF04) and the Create Billing Documents -Billing Due List ltems app? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -1060,8 +1139,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.77/82`,
+                question: [
                     `How can you enable partal deliveries for a sales order, while making sure to get as few deliveries as possible?`,
                 ],
                 options: [
@@ -1072,8 +1152,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.78/82`,
+                question: [
                     `Which business partner categories can you use to create customer master records? `,
                     `Note: There are 2 correctanswers to this question.`,
                 ],
@@ -1085,8 +1166,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.79/82`,
+                question: [
                     `To avoid critical situations in demand and procurement, the material availabilty check can be combined with product allocations. Which benefit can be achieved by this?`,
                 ],
                 options: [
@@ -1097,8 +1179,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.80/82`,
+                question: [
                     `What are some characteristics of the process flow in SAP S/4HANA? `,
                     `Note: There are 2 correct answers to this question.`,
                 ],
@@ -1110,8 +1193,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.81/82`,
+                question: [
                     `You want to determine the item category in a sales document. What do you need to consider? `,
                     `Note: There are2 correct answers to this questlion.`,
                 ],
@@ -1123,8 +1207,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO.82/82`,
+                question: [
                     `When creating a business partner, allocation of the business partner number is controlled by a number range assigned to which object?`,
                 ],
                 options: [
@@ -1135,8 +1220,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO82 new`,
+                question: [
                     `When you set up a billing document, which copy control parameteres are available at header level?`,
                     `There are 2 correct answers to this question.`,
                 ],
@@ -1148,8 +1234,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO83`,
+                question: [
                     `Whichi organizational assignment is required for a sales process?`,
                     `Please choose the correct answer.`,
                 ],
@@ -1161,8 +1248,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO84`,
+                question: [
                     `Which organizational units must you set up for billing? `,
                 ],
                 options: [
@@ -1173,8 +1261,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO85`,
+                question: [
                     `Which of the following funcitons are based on the condition technique?`,
                 ],
                 options: [
@@ -1186,8 +1275,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO86`,
+                question: [
                     `What is used to determine a pricing procedure?`,
                 ],
                 options: [
@@ -1198,8 +1288,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO87`,
+                question: [
                     `Which settings do the case sales process and the rush order process have in common?`,
                 ],
                 options: [
@@ -1210,8 +1301,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO88`,
+                question: [
                     `What settings should you make to ensure precise scheduling is used when the systerm performs delivery scheduling?`,
                 ],
                 options: [
@@ -1223,8 +1315,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO89`,
+                question: [
                     `you want to be able to create an goods issue an outbound delivery for a sails order/`,
                     `what settings should you make?`,
                 ],
@@ -1237,8 +1330,9 @@
                 ],
             },
             {
-                question: [
+                title:
                     `NO90`,
+                question: [
                     `You want to configure that only complete sales documents can be saved. How can you achieve this?`,
                 ],
                 options: [
@@ -1297,7 +1391,7 @@
             } else if (markedQuestions.length === currentQuestionIndex) {
                 currentQuestionIndex--;
                 updateQuestionDisplay();
-            } else{
+            } else {
                 updateQuestionDisplay();
             }
         }
@@ -1345,8 +1439,10 @@
             var options = currentQuestion.options.slice(); // Create a copy of the options array
             shuffleOptions(options); // Shuffle the options
             var optionsContainer = document.getElementById("options");
+            var titleContainer = document.getElementById("title");
             var resultContainer = document.getElementById("result");
             var answersContainer = document.getElementById("answers");
+            titleContainer.innerText = '\n' + currentQuestion.title;
             optionsContainer.innerHTML = "";
             answersContainer.innerHTML = "";
             var no = 0;
@@ -1366,23 +1462,26 @@
                 optionsContainer.appendChild(document.createElement("br"));
             });
             answersContainer.innerText = correctOptionNos.sort().join(',');
+            titleContainer.style.display = "none";
             resultContainer.style.display = "none";
             answersContainer.style.display = "none";
         }
 
         function checkAnswer() {
             var selectedAnswers = document.querySelectorAll('input[name="answer"]:checked');
+            var titleContainer = document.getElementById("title");
             var resultContainer = document.getElementById("result");
             var answersContainer = document.getElementById("answers");
             if (selectedAnswers.length > 0) {
                 if (Array.from(selectedAnswers, e => e.value).sort().join(',') === answersContainer.innerText) {
-                    resultContainer.innerText = "\n○ Correct!\n";
+                    resultContainer.innerText = "○ Correct!\n";
                 } else {
-                    resultContainer.innerText = "\n× Wrong! The correct answer is:\n";
+                    resultContainer.innerText = "× Wrong! The correct answer is:\n";
                 }
             } else {
-                resultContainer.innerText = "\n× Wrong! The correct answer is:\n";
+                resultContainer.innerText = "× Wrong! The correct answer is:\n";
             }
+            titleContainer.style.display = "block";
             resultContainer.style.display = "block";
             answersContainer.style.display = "block";
         }
