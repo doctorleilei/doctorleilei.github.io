@@ -38,19 +38,22 @@
     <div id='onload'>
         <br>
         <br>
-        <button id="sequence-button" onclick="showSequentialQuestions()">Sequential Questions All</button>
+        <button id="sequence-button-all" onclick="showSequentialQuestionsAll()">Sequential Questions All</button>
         <br>
-        <button id="sequence-button" onclick="showSequentialQuestionsFrom1()">Sequential Questions 1~20</button>
+        <button id="sequence-button-from1" onclick="showSequentialQuestionsFrom1()">Sequential Questions 1~20</button>
         <br>
-        <button id="sequence-button" onclick="showSequentialQuestionsFrom21()">Sequential Questions 21~40</button>
+        <button id="sequence-button-from21" onclick="showSequentialQuestionsFrom21()">Sequential Questions
+            21~40</button>
         <br>
-        <button id="sequence-button" onclick="showSequentialQuestionsFrom41()">Sequential Questions 41~60</button>
+        <button id="sequence-button-from41" onclick="showSequentialQuestionsFrom41()">Sequential Questions
+            41~60</button>
         <br>
-        <button id="sequence-button" onclick="showSequentialQuestionsFrom61()">Sequential Questions 61~80</button>
+        <button id="sequence-button-from61" onclick="showSequentialQuestionsFrom61()">Sequential Questions
+            61~80</button>
         <br>
-        <button id="sequence-button" onclick="showSequentialQuestionsFrom81()">Sequential Questions 81~</button>
+        <button id="sequence-button-from81" onclick="showSequentialQuestionsFrom81()">Sequential Questions 81~</button>
         <br>
-        <button id="random-button" onclick="showRandomQuestions()">Random Questions</button>
+        <button id="random-button" onclick="showRandomQuestionsAll()">Random Questions All</button>
     </div>
     <div id="question-container" style="display: none;">
         <div id='head'>
@@ -58,6 +61,10 @@
             <button id="unmark-button" onclick="unmarkQuestion()">Unmark</button>
             <button id="all-button" onclick="showAllQuestions()">Show All Questions</button>
             <button id="marked-button" onclick="showMarkedQuestions()">Show Marked Questions</button>
+            <br>
+            <button id="random-mark" onclick="randomMarkedQuestions()">Random Marked Questions</button>
+            <button id="clear-mark" onclick="clearMarkedQuestions()">Clear Marked Questions</button>
+            <br>
             <button id="try-again-button" onclick="tryAgain()">Try Again</button>
         </div>
         <div id="question"></div>
@@ -1422,12 +1429,33 @@
             document.getElementById("unmark-button").style.display = "none";
         }
 
+        function randomMarkedQuestions() {
+            currentMarkedQuestionIndex = 0;
+            shuffleOptions(markedQuestions);
+            if (questions != allQuestions) {
+                currentQuestionIndex = currentMarkedQuestionIndex;
+                questions = markedQuestions;
+                updateQuestionDisplay();
+            }
+            alert("Questions randomed.");
+        }
+
+        function clearMarkedQuestions() {
+            if (confirm("Questions will be clear!")) {
+                currentMarkedQuestionIndex = 0;
+                markedQuestions = [];
+                if (questions != allQuestions) {
+                    currentQuestionIndex = 0;
+                    showAllQuestions();
+                }
+                alert("Questions cleared.");
+            }
+        }
+
         function tryAgain() {
             if (confirm("Questions will be reset!")) {
                 currentQuestionIndex = 0;
                 currentAllQuestionIndex = 0;
-                currentMarkedQuestionIndex = 0;
-                markedQuestions = [];
                 document.getElementById("onload").style.display = "block";
                 document.getElementById("question-container").style.display = "none";
             }
@@ -1486,7 +1514,7 @@
             answersContainer.style.display = "block";
         }
 
-        function showSequentialQuestions() {
+        function showSequentialQuestionsAll() {
             document.getElementById("onload").style.display = "none";
             allQuestions = originalQuestions.slice();
             questions = allQuestions;
@@ -1558,7 +1586,7 @@
             document.getElementById("unmark-button").style.display = "none";
         }
 
-        function showRandomQuestions() {
+        function showRandomQuestionsAll() {
             document.getElementById("onload").style.display = "none";
             allQuestions = originalQuestions.slice();
             shuffleOptions(allQuestions);
